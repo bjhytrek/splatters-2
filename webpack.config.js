@@ -20,7 +20,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/dist/",
+    path: __dirname + "./dist/",
     filename: "client.min.js"
   },
   plugins: debug ? [] : [
