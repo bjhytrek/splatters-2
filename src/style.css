@@ -2,7 +2,11 @@
   object-fit: cover;
   height: 400px !important;
 }
+.contact-section {
+  width: 50%;
+}
 main {
+  flex-grow: 2;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -29,4 +33,24 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.photoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.photo {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  overflow: hidden;
+}
+.photo img {
+  cursor: pointer;
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
 }

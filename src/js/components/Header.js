@@ -21,9 +21,11 @@ export default class Header extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
         <Nav>
-          <li><Link to="/Pricing">Pricing</Link></li>
-          <li><Link to="/Gallery">Gallery</Link></li>
-          <li><Link to="/Reservations">Reservations</Link></li>
+          <li><Link to="Pricing">Pricing</Link></li>
+          <li><Link to="Gallery">Gallery</Link></li>
+          <li><Link to="Reservations">Reservations</Link></li>
+          <li><Link to="ContactUs">Contact Us</Link></li>
+          <li><Link to="Todo">Todo</Link></li>
         </Nav>
 
         </Navbar.Collapse>

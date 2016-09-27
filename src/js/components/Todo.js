@@ -6,8 +6,6 @@ import { Button, FormGroup, ControlLabel, FormControl, ListGroup, ListGroupItem 
 
 @connect((store) => {
   return {
-    user: store.user.user,
-    userFetched: store.user.fetched,
     posts: store.posts.posts,
     postsFetched: store.posts.fetched,
   };
@@ -17,7 +15,6 @@ export default class Todo extends React.Component {
 state = { post: '' };
 
 componentWillMount() {
-  this.props.dispatch(fetchUser())
   this.props.dispatch(fetchPosts())
 }
 
@@ -40,7 +37,6 @@ handleInputChange(event) {
    });
 
    return <div>
-     <h1>{user.name}</h1>
      <ListGroup>{mappedPosts}</ListGroup>
        <FormGroup>
        <ControlLabel>Type your post here:</ControlLabel>

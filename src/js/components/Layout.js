@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Link } from 'react-router';
 import Header from './Header.js';
 import Footer from './Footer.js';
-import Todo from './Todo.js';
 
 // @connect((store) => {
 //   return {

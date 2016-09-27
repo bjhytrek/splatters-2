@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Carousel, PageHeader } from 'react-bootstrap';
+import { Carousel, PageHeader, Modal, Button } from 'react-bootstrap';
 
 export default class Home extends React.Component {
 

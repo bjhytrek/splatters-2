@@ -10,16 +10,12 @@ import { fetchBooking } from "../actions/bookingActions";
 // })
 
 export default class Reservations extends React.Component {
-  loadJS(){
-  return {
-    __html: <script type="text/javascript" src=""/>};
-}
 
   render() {
 
     return <div>
     <h2>The Reservations component.</h2>
-    <div dangerouslySetInnerHTML={{__html: <script type='text/javascript' src='//splatters.simplybook.me/iframe/pm_loader_v2.php?width=960&url=//splatters.simplybook.me&theme=bootstrap__square_rainbow__colored_light&layout=bootstrap__square_rainbow&timeline=modern_week&mode=auto&mobile_redirect=0'></script>}} />
+    <div dangerouslySetInnerHTML={{__html: '<iframe src="https://app.acuityscheduling.com/schedule.php?owner=12764859" width="100%" height="1000" frameBorder="0"></iframe>'}} />
         </div>
   }
 }
