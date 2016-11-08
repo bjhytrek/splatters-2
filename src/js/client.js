@@ -9,7 +9,8 @@ import Reservations from './components/Reservations';
 import Gallery from './components/Gallery';
 import ContactUs from './components/ContactUs';
 import store from "./store";
-import Todo from './components/Todo';
+import WaiverForm from './components/WaiverForm';
+import Admin from './components/Admin';
 
 const router = (
   <Router history={hashHistory}>
@@ -19,7 +20,8 @@ const router = (
       <Route path="reservations" component={Reservations} />
       <Route path="gallery" component={Gallery} />
       <Route path="contactUs" component={ContactUs} />
-      <Route path="todo" component={Todo} />
+      <Route path="waiverForm" component={WaiverForm} />
+      <Route path="admin" component={Admin} />
 
 
     </Route>

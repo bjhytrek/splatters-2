@@ -12,7 +12,7 @@ export default class Header extends React.Component {
   render() {
 
     return <header>
-        <Navbar inverse>
+        <Navbar >
         <Navbar.Header>
           <Navbar.Brand>
             <Link to='/'>Splatters</Link>
@@ -21,11 +21,11 @@ export default class Header extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
         <Nav>
-          <li><Link to="Pricing">Pricing</Link></li>
+          <li eventKey={1}><Link to="Pricing">Pricing</Link></li>
           <li><Link to="Gallery">Gallery</Link></li>
           <li><Link to="Reservations">Reservations</Link></li>
           <li><Link to="ContactUs">Contact Us</Link></li>
-          <li><Link to="Todo">Todo</Link></li>
+          <li><Link to="WaiverForm">Waiver Forms</Link></li>
         </Nav>
 
         </Navbar.Collapse>
