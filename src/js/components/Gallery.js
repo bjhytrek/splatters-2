@@ -8,7 +8,7 @@ export default class Gallery extends React.Component {
   render() {
 
     return <div>
-    <h2>The Gallery component.</h2>
+    <h2>Gallery</h2>
     <LightboxWrapper />
         </div>
   }

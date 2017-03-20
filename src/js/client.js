@@ -17,10 +17,10 @@ const router = (
     <Route path="/" component={Layout}>
       <IndexRoute components={Home} />
       <Route path="pricing" component={Pricing} />
-      <Route path="reservations" component={Reservations} />
+      {/* <Route path="reservations" component={Reservations} /> */}
       <Route path="gallery" component={Gallery} />
       <Route path="contactUs" component={ContactUs} />
-      <Route path="waiverForm" component={WaiverForm} />
+      {/* <Route path="waiverForm" component={WaiverForm} /> */}
       <Route path="admin" component={Admin} />
 
 

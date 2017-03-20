@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchContent, updateContent, deleteContent, fetchTestimonials } from "../actions/adminActions";
-import { PageHeader, Button, Tabs, Tab } from 'react-bootstrap';
+import { fetchContent, fetchAllContent, updateContent, deleteContent, fetchTestimonials } from "../actions/adminActions";
+import { PageHeader, Button, Tabs, Tab, Panel, } from 'react-bootstrap';
 
 @connect((store) => {
   return {
@@ -14,23 +14,48 @@ export default class Admin extends React.Component {
 
 constructor(props) {
   super(props);
-  this.props.dispatch(fetchContent());
-  this.props.dispatch(fetchTestimonials());
+  this.state = {
+      key: 'homepage',
+  }
+  this.props.dispatch(fetchAllContent());
+  // this.props.dispatch(fetchTestimonials());
  }
 
- render() {
+ handleSelect(key) {
+   console.log("handleSelect run", key)
+    this.setState({key});
+    // this.handleContentChange(key);
+  }
 
-   const { content } = this.props;
+  handleContentChange(key){
+    // this.props.dispatch(fetchContent(key));
+  }
+
+ render() {
+    let { content } = this.props;
+    let { key } = this.state;
+    // let mappedHome = Object.keys(content.homepage).map((d,i)=>{
+    //
+    // })
+   function mapContent(data){
+    Object.keys(data).map((i)=>{
+      if(typeof data[i] == 'object'){
+        mapcontent(data[i]);
+      }else{
+        return (
+          <li key={i}>{data[i]}</li>
+        )
+      }
+   })
+ }
+
+ const mappedContent = mapContent(content.testimonials);
+   console.log(content.testimonials);
+   console.log(mappedContent)
+
    return <div>
-   <PageHeader>Admin Console <small>Update Content at will.</small></PageHeader>
-   <Tabs defaultActiveKey={1} id="uncontrolled-tabs">
-     <Tab eventKey={1} title="Home">
-     {content.title}
-     </Tab>
-     <Tab eventKey={2} title="Pricing">Pricing</Tab>
-     <Tab eventKey={3} title="Gallery">Gallery</Tab>
-     <Tab eventKey={4} title="Contact Us">Contact Us</Tab>
-   </Tabs>
+     <h1>Admin Console <small>Update Content at will.</small></h1>
+     {/* <ul>{mappedContent}</ul> */}
        </div>
  }
 

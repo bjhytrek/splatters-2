@@ -13,14 +13,18 @@ export default class Footer extends React.Component {
 
     return <footer>
       <div className="footer--container container">
-        <div>LOGO</div>
-        <div>157 N 2nd E
-          Rexburg, ID 83440
-          ph: (208)-357-4171
-          splattersrexburg@gmail.com</div>
-        <div className="copyright">Copyright 2016 Splatters Paintball and Family Fun Center. All rights reserved.</div>
-
+        <div><h5><img src="./logos/splatters-plain-3.png" alt="Splatters"/></h5></div>
+        <div>
+            <h5 style={{color:'white'}}>157 N 2nd E Rexburg, ID 83440</h5>
+            <h5 style={{color:'white'}}>
+              phone: (208)-357-4171
+          </h5>
+            <h5 style={{color:'white'}}>
+              paintball@splatterswarzone.com
+          </h5>
       </div>
+      </div>
+      <div className="copyright">Copyright 2017 Splatters War Zone LLC. All rights reserved.</div>
 </footer>
   }
 }

@@ -13,23 +13,24 @@ export default class Header extends React.Component {
 
     return <header>
         <Navbar >
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link to='/'>Splatters</Link>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-        <Nav>
-          <li eventKey={1}><Link to="Pricing">Pricing</Link></li>
-          <li><Link to="Gallery">Gallery</Link></li>
-          <li><Link to="Reservations">Reservations</Link></li>
-          <li><Link to="ContactUs">Contact Us</Link></li>
-          <li><Link to="WaiverForm">Waiver Forms</Link></li>
-        </Nav>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <Link className="hidden-xs" to='/'><img width={300} src="./logos/splatters-no-background.png" alt="Splatters"/></Link>
+                    <Link className="visible-xs" to='/'><img width={300} src="./logos/splatters-plain-3.png" alt="Splatters"/></Link>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav>
+                    <li eventKey={1}><Link to="Pricing">Prices</Link></li>
+                    <li><Link to="Gallery">Gallery</Link></li>
+                    {/* <li><Link to="Reservations">Reservations</Link></li> */}
+                    <li><Link to="ContactUs">Contact Us</Link></li>
+                    {/* <li><Link to="WaiverForm">Waiver Forms</Link></li> */}
+                </Nav>
 
-        </Navbar.Collapse>
+            </Navbar.Collapse>
         </Navbar>
-        </header>
+    </header>
   }
 }
